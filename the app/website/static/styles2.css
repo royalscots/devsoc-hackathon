@@ -1,0 +1,77 @@
+body{
+    margin: 0%;
+}
+nav{
+    background-color: #110a3b;
+    height: 55px;
+    width: 100%;
+}
+.nav-list {
+    float: right;
+    margin-right: 20px;
+
+}
+.nav-list-object{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 15px;
+}
+.nav-list-object-a {
+    color: white;
+    font: 20px 'sans-serif';
+    text-decoration: none;    
+    padding: 5px;
+}
+.nav-list-object-a:hover,.nav-list-object-a:active{
+    background: #4c4c63;
+    transition: .5s;
+    padding: 5px;
+}
+
+.product-box{
+    margin-top:2%;
+    margin-bottom: 2%;
+    margin-left: 23%;
+    margin-right: 23%;
+    height: 110%;
+    width: auto;
+    border: #b20b24 solid 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.product-box-image-box{
+    height: 300px;
+    margin: 0 auto;
+    width: 600px;
+    
+}
+.product-box-image{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+    
+}
+.home-product{
+    height: 200px;
+    width: 600px;
+    border: #110a3b solid;
+    margin-left: 23%;
+    margin-right: 23%;
+    margin-top: 20px;  
+}
+.price{
+    color: #b20b24;
+    font-size: larger ;
+    font:bold;
+}
+.home-product-a:link,.home-product-a:visited,.home-product-a:hover,.home-product-a:active{
+    text-decoration: none;
+}
+.chat_button{
+    float: right;
+    float: left;
+    background-color: #110a3b;
+    color: white;
+
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Listing</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <a href="#">BargainBay</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="/{{user_id}}/my-product">My Products</a></li>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/about-us">About Us</a></li>
+        
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+        </nav>
+    </header>  
+  <h1>Create New Listing</h1>
+  
+  <form method="POST">
+    <label for="name">Product Name</label>
+    <input type="text" name="name" value="{{product_details['product_name']}}"><br>
+    <label for="catagory">catagory</label>
+
+    <select name="catagory" id="select-catagory" >
+      <option value="Electronics">Electronics</option>
+      <option value="Educational">Educational</option>
+      <option value="Personal item">Personal Item</option>
+      <option value="Crafts">Crafts</option>
+      <option value="Other">Other</option>
+    </select><br>
+    <label for="sub_catagory" >Sub catagory</label>
+    <input type="text" name="sub_catagory" value="{{product_details['sub_catagory']}}"><br>
+    <label for="price" >Price</label>
+    <input type="text" name="price"value="{{product_details['price']}}"><br>
+    <label for ='image'>Image</label>
+    <input type="file" name="image">
+    <label for="description">description</label>
+    <textarea name="description" cols="50" rows="4" value="{{product_details['description']}}"></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

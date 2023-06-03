@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#">BargainBay</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/sign-up">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="login-section">
+    <div class="login-container">
+      <h2>Login</h2>
+      <form method="POST">
+        <label for="email">Email:</label>
+        <input type="tel" name="email" placeholder="email"><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="password"><br>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 BargainBay. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product View Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <a href="#">BargainBay</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="/{{user_id}}/my-product">My Products</a></li>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+        </nav>
+    </header>  
+    <div class="container">
+        <div class="product-image-container">
+            <div>
+                <img src="product-image.jpg" alt="Product Image" class="product-image">
+            </div>
+            <div class="empty">
+
+            </div>
+        </div>
+        <h1>{{product_details['product_name']}}</h1> 
+        <p>Product catagory: {{product_details['catagory']}}</p>
+        <p class="description">Sub catagory:{{product_details['sub_catagory']}}</p>
+        <p class="price">Price: {{product_details['price']}}</p>
+        <p class="description">description: {{product_details['description']}}</p>
+        <div class="Chat-button">
+            <a href="/chatproduct/{{product_details['product_id']}}/{{user_id}}" class="Chat">CHAT</a>
+        </div>
+    </div>
+    
+</body>
+</html>
+

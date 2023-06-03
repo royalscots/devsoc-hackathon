@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BargainBay</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles1.css') }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#">BargainBay</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/{{user_id}}/my-product">My Products</a></li>
+        <li><a href="/{{user_id}}/new-product">New Product</a></li>
+        <li><a href="/about-us">About Us</a></li>
+        
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-list">
+      {%for product in products%}
+      <a href="/view-product/{{product['_id']}}" class="home-product-a" >
+      <div class="product">
+        
+        <h3>{{product['product_name']}}</h3>
+        <p class=" price" >Price: {{product['price']}}</p>
+        <p>{{product['description']}}</p>
+
+      </div>
+      </a>
+      {%endfor%}
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2023 BargainBay. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
